@@ -20,9 +20,9 @@ void setup() {
 }
 
 void loop() {
-    xSlider.move(+1, 20);
+    xSlider.move(+20);
     delay(2000);
-    xSlider.move(-1, 20);
+    xSlider.move(-20);
     delay(2000);
 
 }

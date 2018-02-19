@@ -43,7 +43,7 @@ SLIDER::SLIDER(){
 }
 
 
-void SLIDER::move(int direction, int distance){
+void SLIDER::move(float distance){
 /*
 distance is measured in millimeter
 
@@ -56,15 +56,15 @@ I should properly study it and find the optimized value.
     int delayMicroSec = 1000;
     long numStep;
 
-    if ( direction * POSITIVE_DIR >= 0){
+    if ( distance * POSITIVE_DIR >= 0){
         digitalWrite(PIN_DIR, HIGH);
     } else {
         digitalWrite(PIN_DIR, LOW);
     }
 
-    numStep = long( distance/DTC_PER_STEP );
+    numStep = long( abs(distance)/DTC_PER_STEP );
     Serial.print("numStep = ");
-    Serial.print(distance/DTC_PER_STEP);
+    Serial.print( abs(distance)/DTC_PER_STEP);
     Serial.print("  ");
     Serial.println(numStep);
     /* @caution, @improve

@@ -17,7 +17,7 @@ class SLIDER
 
         SLIDER();
 
-        void move(int direction, int lapp);
+        void move(float distance);
 
 };
 
